@@ -106,9 +106,11 @@ body {
   text-align: center;
   background-image: linear-gradient(
     to right,
-    rgba(255, 191, 242, 0.7),
-    rgba(121, 190, 254, 0.7)
+    rgba(226, 191, 245, 0.7),
+    rgba(171, 190, 250, 0.7)
   );
+  //   background-color: darken($white, 5);
+  //   background-color: rgba(211, 191, 247, 0.5);
   padding: 2rem;
   border-radius: 2px;
   &__link {
@@ -138,26 +140,74 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
+  //   align-items: flex-end;
   border-radius: 2px;
   &__img {
     width: 100%;
     height: auto;
-    border: 1.7rem solid $white;
+    border: 1.7rem solid darken($white, 2);
     border-radius: 2px;
   }
+  //   &__title {
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: flex-end;
+  //     align-items: flex-end;
+  //     border-radius: 2px;
+  //     position: absolute;
+  //     background-color: darken($white, 2);
+  //     padding: 2rem;
+  //     opacity: 1;
+  //     bottom: 0;
+  //     height: 9rem;
+  //     width: 100%;
+  //   }
   &__overlay {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    border-radius: 5px;
+    align-items: flex-end;
+    border-radius: 2px;
     position: absolute;
-    background-color: $color-secondary;
-    opacity: 0;
+    background-color: darken($white, 2);
+    padding: 2rem;
+    opacity: 1;
     top: 0;
-    left: 0;
-    right: 0;
-    left: 0;
     height: 100%;
     width: 100%;
+    transition: all 0.4s;
+    &:hover {
+      //   opacity: 0.95;
+    }
+  }
+}
+
+.btn-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn {
+  font-size: 1.2rem;
+  padding: 1rem 1.7rem;
+  background-color: $color-tertiary;
+  border-radius: 5px;
+  &:link,
+  &:visited {
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: none;
+    color: $color-secondary;
+    box-shadow: 3px 3px 3px lighten($color-secondary, 60);
+    transition: all 0.3s;
+  }
+  &:hover,
+  &:active {
+    color: $color-primary;
+    box-shadow: 3px 3px 3px lighten($color-secondary, 65);
+  }
+  &:not(:first-child) {
+    margin-left: 2rem;
   }
 }
 
@@ -166,30 +216,28 @@ body {
   font-weight: 700;
   font-size: 2.5rem;
 }
-
+.heading-secondary {
+  font-weight: 700;
+  font-size: 2.3rem;
+}
 .paragraph {
   font-size: $default-font-size;
   color: $color-secondary;
 }
-
-.btn-text {
-  text-decoration: none;
-
-  &:link,
-  &:visited {
-    display: inline-block;
-    text-decoration: none;
-    color: $color-primary;
-    transition: all 0.4s;
-  }
-  &:hover,
-  &:active {
-    color: $color-tertiary;
-  }
+.card-subheading {
+  font-size: $default-font-size;
+  font-weight: 500;
+}
+.card-text {
+  font-size: $default-font-size;
+  color: $color-secondary;
+  text-align: right;
 }
 
 //UTILITIES
-
+.margin-top-xs {
+  margin-top: 2rem;
+}
 .margin-top-md {
   margin-top: 10rem;
 }
