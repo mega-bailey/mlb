@@ -102,11 +102,13 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+
   background-image: linear-gradient(
     to right,
     rgba(226, 191, 245, 0.7),
     rgba(189, 188, 248, 0.7)
   );
+  background-color: darken($bg, 2);
   padding: 2rem;
   border-radius: 12px;
   &__link {
@@ -170,20 +172,20 @@ body {
   padding: 1rem 1.7rem;
   background-color: darken($bg, 2);
   border: 1px solid $color-secondary;
-  border-radius: 25px;
+  border-radius: 20px;
   &:link,
   &:visited {
     font-weight: 500;
     display: inline-block;
     text-decoration: none;
-    color: darken($color-tertiary, 23);
+    color: $color-secondary;
     box-shadow: 3px 3px 3px lighten($color-secondary, 55);
     transition: all 0.3s ease-in;
   }
   &:hover,
   &:active {
     background-color: darken($bg, 0);
-    color: darken($color-tertiary, 15);
+    color: lighten($color-secondary, 15);
     box-shadow: 3px 3px 3px lighten($color-secondary, 63);
   }
   &:not(:first-child) {
