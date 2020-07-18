@@ -6,6 +6,7 @@ $color-tertiary: rgb(134, 133, 133);
 $color-accent: #44bac4;
 $font-primary: 'Montserrat', sans-serif;
 $default-font-size: 1.5rem;
+$caption-font-size: 1.1rem;
 $small-font-size: 1.3rem;
 
 //MEDIA QUERIES
@@ -268,6 +269,7 @@ body {
     font-weight: 500;
   }
   &__lang-text {
+    font-size: $caption-font-size;
     color: lighten($color-secondary, 30);
   }
   &__text {
