@@ -323,7 +323,7 @@ body {
 .paragraph {
   font-size: $default-font-size;
   color: $color-secondary;
-  @include respond(tab-land) {
+  @include respond(phone) {
     font-size: 50%;
   }
 }
