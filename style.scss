@@ -323,6 +323,9 @@ body {
 .paragraph {
   font-size: $default-font-size;
   color: $color-secondary;
+  @include respond(phone) {
+    font-size: 50%;
+  }
 }
 .bold {
   font-weight: 700;
