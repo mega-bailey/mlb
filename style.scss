@@ -192,7 +192,7 @@ body {
   &--envelope {
     font-size: 3rem;
     transition: all 0.4s;
-    margin-top: 1rem;
+    margin: 1rem 0 0.5rem 0;
     &:link,
     &:visited {
       display: inline-block;
@@ -240,7 +240,7 @@ body {
     max-width: 100%;
     height: auto;
     opacity: 0.7;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in;
     &:hover {
       opacity: 1;
     }
