@@ -53,6 +53,7 @@ $small-font-size: 1.3rem;
 
 html {
   font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
 
   @include respond(tab-land) {
     font-size: 56.25%;
@@ -323,9 +324,6 @@ body {
 .paragraph {
   font-size: $default-font-size;
   color: $color-secondary;
-  @include respond(phone) {
-    font-size: 50%;
-  }
 }
 .bold {
   font-weight: 700;
